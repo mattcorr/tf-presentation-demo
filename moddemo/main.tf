@@ -39,6 +39,6 @@ resource "aws_s3_bucket" "bucket" {
 module "sqs" {
   source = "../modules/sqs"
 
-  # pass our folders variable to the module variable
+  # pass our list of sqs metadata variable to the module variable
   sqs_queues_fifo = var.sqs_queues
 }

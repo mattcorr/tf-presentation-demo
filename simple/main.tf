@@ -37,8 +37,8 @@ resource "aws_sqs_queue" "message_queue" {
   max_message_size          = 2048
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
-  name                      = format("%s.fifo", var.sqs_name)
-  fifo_queue                = true
+  name                      = "${var.sqs_name}.fifo"
+   fifo_queue                = true
   tags = {
     Environment = "Demo"
     VPC_ARN  = data.aws_vpc.current_vpc.arn

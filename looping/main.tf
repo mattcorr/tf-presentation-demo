@@ -42,7 +42,7 @@ resource "aws_sqs_queue" "message_queue" {
   max_message_size          = each.value["max_msg_size"]
   message_retention_seconds = 86400
   receive_wait_time_seconds = each.value["receive_wait_secs"]
-  name                      = format("%s.fifo", each.key)
+  name                      = "${each.key}.fifo"
   fifo_queue                = true
   tags = {
     Environment = each.value["environment"]
