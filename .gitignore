@@ -7,6 +7,9 @@
 *.tfstate
 *.tfstate.*
 
+# Ignore IntelliJ project files
+**/.idea/*
+
 # Crash log files
 crash.log
 
