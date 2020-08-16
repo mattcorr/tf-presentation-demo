@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.12.23"
+  required_version = ">= 0.13.0"
   backend "s3" {
     bucket = "mcorr-terraform-state"
     key    = "presentation/simple-demo.tfstate"
